@@ -12,9 +12,14 @@ module.exports = {
   },
   resolve: {
     alias: {
-        'mapbox-gl': 'mapbox-gl/dist/mapbox-gl.js'
-    }
-  }
+        'mapbox-gl': 'mapbox-gl/dist/mapbox-gl.js',
+    },
+    extensions: ['.js', '.json'],
+    fallback: {
+          fs: false
+    },
+    
+  },
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],
@@ -42,9 +47,13 @@ module.exports = {
         test: /\.worker\.js$/,
         use: { loader: 'worker-loader'},
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      }
     ],
-    noParse: /(mapbox-gl)\.js$/
+    noParse: /(mapbox-gl)\.js$/,
   },
 };
 
-mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;

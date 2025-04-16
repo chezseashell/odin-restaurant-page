@@ -1,21 +1,14 @@
-console.log("Webpack test")
-
-import "./styles.css";
-import restaurantImage from "./homepageImage.jpg";
 import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-
-const backgroundImg = document.createElement("img");
-backgroundImg.id= "backgroundImg";
-
-const contentDiv = document.getElementById("content")
-backgroundImg.src = restaurantImage;
-
-contentDiv.append(backgroundImg)
-
+// import 'mapbox-gl/dist/mapbox-gl.css';
+import { createContent } from './contentDivHTML';
+import "./styles.css";
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2hlenNlYXNoZWxsIiwiYSI6ImNtNjl0emppdzBzcGoyam9vOW94OHQ0OGMifQ.53E-aQJhAJjo7u7G24gPgg'; // Replace with your actual token
+
+const contentDiv = createContent();
+document.body.append(contentDiv);
+
 
 const map = new mapboxgl.Map({
   container: 'map', // ID of the container element
@@ -25,5 +18,4 @@ const map = new mapboxgl.Map({
 });
 
 
-contentDiv.append(mapDiv)
 
