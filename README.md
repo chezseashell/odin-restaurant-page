@@ -7,6 +7,6 @@ A simple, restaurant landing page using webpack and mapbox.
 
 
 ## GitHub Page link
-[See it here] (https://htmlpreview.github.io/?https://github.com/chezseashell/odin-restaurant-page
+[See it here] (https://chezseashell.github.io/odin-restaurant-page/)
 
 
