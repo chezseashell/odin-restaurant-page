@@ -47,11 +47,11 @@ module.exports = {
         test: /\.worker\.js$/,
         use: { loader: 'worker-loader'},
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
-      }
+    //   {
+    //     test: /\.js$/,
+    //     exclude: /node_modules/,
+    //     use: ['babel-loader']
+    //   }
     ],
     noParse: /(mapbox-gl)\.js$/,
   },
