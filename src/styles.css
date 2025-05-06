@@ -239,7 +239,7 @@ li {
     flex-direction: column;
     align-content: center;
     padding: 80px 120px 80px 120px;
-    background-color: rgba(48, 87, 81, 0.4);
+    background-color: rgba(48, 87, 81, 0.2);
     gap:40px;
     width: fit-content;
     color: rgba(250, 248, 248, 0.5);
@@ -264,6 +264,83 @@ li {
 .menu-section li {
     padding-bottom:10px;
 }
+
+#contact-page-div {
+    margin:auto;
+    margin-top: 40px;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 80px 120px 80px 120px;
+    background-color: rgba(48, 87, 81, 0.2);
+    gap:40px;
+    width: fit-content;
+    color: rgba(250, 248, 248, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#contact-page-div h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(251, 251, 251, 0.8);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-weight: 100;
+    border-left: 2px solid #b6b912;
+    padding-left:20px;
+    margin-bottom: 45px;
+}
+
+.contact-title {
+    margin-bottom: 15px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(250, 248, 248, 0.5);
+    
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(250, 248, 248, 0.5);
+    margin-bottom: 10px;
+    min-height: 50px;
+    margin-bottom: 35px;
+}
+
+textarea::placeholder, input::placeholder {
+    color: rgba(250, 248, 248, 0.25);
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+
+
+.form-group {
+    display: grid;
+    grid-template-columns: .25fr 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.form-submit {
+    background-color: #b6b912;
+    width: 100px;
+    height: 30px;
+    border: none;
+    color: #212c28;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.form-submit:hover {
+    background-color: rgba(182, 185, 18, .7);
+}
+
 @media only screen and (max-width: 450px) {
 
     #backgroundImg {
